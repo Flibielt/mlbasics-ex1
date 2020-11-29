@@ -6,3 +6,4 @@ from .gradient_descent_multi import gradient_descent_multi
 from .normal_eqn import normal_eqn
 from .plot_data import plot_data
 from .warm_up_exercise import warm_up_exercise
+from .pause import pause
