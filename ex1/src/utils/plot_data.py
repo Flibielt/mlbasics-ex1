@@ -1,3 +1,6 @@
+from matplotlib import pyplot
+
+
 def plot_data(x, y):
     """
     plot_data Plots the data points x and y into a new figure
@@ -17,3 +20,7 @@ def plot_data(x, y):
           appear as red crosses. Furthermore, you can make the
           markers larger by using plot(..., 'rx', 'MarkerSize', 10);
     """
+
+    fig = pyplot.figure()  # open a new figure
+
+    # ====================== YOUR CODE HERE =======================

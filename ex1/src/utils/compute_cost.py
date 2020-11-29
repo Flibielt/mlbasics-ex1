@@ -1,4 +1,4 @@
-def compute_cost(x, y, theta):
+def compute_cost(X, y, theta):
     """
     compute_cost Compute cost for linear regression
         compute_cost(x, y, theta) computes the cost of using theta as the
@@ -6,10 +6,10 @@ def compute_cost(x, y, theta):
     """
 
     # Initialize some useful values
-    m = len(y)
+    m = y.size  # number of training examples
 
     # You need to return the following variables correctly
-    j = 0
+    J = 0
 
     """
     ====================== YOUR CODE HERE ======================
@@ -19,4 +19,4 @@ def compute_cost(x, y, theta):
 
     # ============================================================
 
-    return j
+    return J
