@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def feature_normalize(x):
+def feature_normalize(X):
     """
     feature_normalize Normalizes the features in X
         feature_normalize(x) returns a normalized version of X where
@@ -11,9 +11,9 @@ def feature_normalize(x):
     """
 
     # You need to set these values correctly
-    x_norm = x
-    mu = np.zeros((1, x.shape(1)))
-    sigma = np.zeros((1, x.shape(1)))
+    X_norm = X.copy()
+    mu = np.zeros(X.shape[1])
+    sigma = np.zeros(X.shape[1])
 
     """
     ====================== YOUR CODE HERE ======================
@@ -34,4 +34,4 @@ def feature_normalize(x):
 
     # ============================================================
 
-    return x_norm
+    return X_norm, mu, sigma

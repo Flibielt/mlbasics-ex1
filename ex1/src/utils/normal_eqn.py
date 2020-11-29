@@ -1,14 +1,14 @@
 import numpy as np
 
 
-def normal_eqn(x, y):
+def normal_eqn(X, y):
     """
     normal_eqn Computes the closed-form solution to linear regression
         normal_eqn(x, y) computes the closed-form solution to linear
         regression using the normal equations.
     """
 
-    theta = np.zeros((x.shape(1), 1))
+    theta = np.zeros(X.shape[1])
 
     """
     ====================== YOUR CODE HERE ======================
@@ -16,4 +16,5 @@ def normal_eqn(x, y):
                   to linear regression and put the result in theta.
     """
 
+    # =================================================================
     return theta

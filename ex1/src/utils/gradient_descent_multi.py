@@ -2,7 +2,7 @@ import numpy as np
 from .compute_cost_multi import compute_cost_multi
 
 
-def gradient_descent_multi(x, y, theta, alpha, num_iters):
+def gradient_descent_multi(X, y, theta, alpha, num_iters):
     """
     gradient_descent_multi Performs gradient descent to learn theta
         theta = gradient_descent_multi(x, y, theta, alpha, num_iters) updates theta by
@@ -10,8 +10,12 @@ def gradient_descent_multi(x, y, theta, alpha, num_iters):
     """
 
     # Initialize some useful values
-    m = len(y)  # number of training examples
-    j_history = np.zeros((num_iters, 1))
+    m = y.shape[0]  # number of training examples
+
+    # make a copy of theta, which will be updated by gradient descent
+    theta = theta.copy()
+
+    J_history = []
 
     for iteration in range(num_iters):
         """
@@ -19,12 +23,12 @@ def gradient_descent_multi(x, y, theta, alpha, num_iters):
         Instructions: Perform a single gradient step on the parameter vector theta.
          
         Hint: While debugging, it can be useful to print out the values
-        of the cost function (computeCostMulti) and gradient here.
+        of the cost function (compute_cost_multi) and gradient here.
         """
 
         # ============================================================
 
         # Save the cost j in every iteration
-        j_history[iteration] = compute_cost_multi(x, y, theta)
+        J_history.append(compute_cost_multi(X, y, theta))
 
-    return theta
+    return theta, J_history
