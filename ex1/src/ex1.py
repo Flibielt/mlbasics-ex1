@@ -1,4 +1,5 @@
 from .utils import warm_up_exercise, pause, plot_data, compute_cost, gradient_descent
+import os
 import numpy as np
 from matplotlib import pyplot
 
@@ -43,7 +44,9 @@ def ex1():
     ======================= Part 2: Plotting =======================
     """
     print('Plotting Data ...')
-    data = np.loadtxt('data/ex1data1.txt', delimiter=',')
+    file_path = os.path.dirname(os.path.realpath(__file__)) + '/data/ex1data1.txt'
+    file_path = file_path.replace('\\', '/')
+    data = np.loadtxt(file_path, delimiter=',')
     X = data[:, 0]
     y = data[:, 1]
     m = y.size
@@ -58,7 +61,7 @@ def ex1():
     """
 
     X = np.stack([np.ones(m), X], axis=1)   # Add a column of ones to x
-    theta = np.zeros((2, 1))    # initialize fitting parameters
+    theta = np.zeros(2)    # initialize fitting parameters
 
     # Some gradient descent settings
     iterations = 1500

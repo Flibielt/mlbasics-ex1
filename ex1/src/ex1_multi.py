@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from matplotlib import pyplot
 
@@ -35,7 +36,9 @@ def ex1_multi():
     ================ Part 1: Feature Normalization ================
     """
     # Load data
-    data = np.loadtxt('Data/ex1data2.txt', delimiter=',')
+    file_path = os.path.dirname(os.path.realpath(__file__)) + '/data/ex1data2.txt'
+    file_path = file_path.replace('\\', '/')
+    data = np.loadtxt(file_path, delimiter=',')
     X = data[:, :2]
     y = data[:, 2]
     m = y.size
@@ -129,7 +132,7 @@ def ex1_multi():
     """
 
     # Load data
-    data = np.loadtxt('Data/ex1data2.txt', delimiter=',')
+    data = np.loadtxt(file_path, delimiter=',')
     X = data[:, :2]
     y = data[:, 2]
     m = y.size
