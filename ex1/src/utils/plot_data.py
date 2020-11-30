@@ -24,3 +24,7 @@ def plot_data(x, y):
     fig = pyplot.figure()  # open a new figure
 
     # ====================== YOUR CODE HERE =======================
+
+    # ============================================================
+
+    pyplot.show()
