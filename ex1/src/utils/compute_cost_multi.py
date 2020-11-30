@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def compute_cost_multi(X, y, theta):
     """
     compute_cost_multi Compute cost for linear regression with multiple variables
@@ -16,6 +19,10 @@ def compute_cost_multi(X, y, theta):
     Instructions: Compute the cost of a particular choice of theta
                   You should set j to the cost.
     """
+
+    h = np.dot(X, theta)
+
+    J = (1 / (2 * m)) * np.sum(np.square(np.dot(X, theta) - y))
 
     # ============================================================
 

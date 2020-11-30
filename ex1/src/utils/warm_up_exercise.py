@@ -12,7 +12,7 @@ def warm_up_exercise():
     Instructions: Return the 5x5 identity matrix 
     """
 
-    A = np.zeros(5)     # Change this
+    A = np.eye(5)
 
     # =========================================
     return A

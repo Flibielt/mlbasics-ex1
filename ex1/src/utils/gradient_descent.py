@@ -25,6 +25,9 @@ def gradient_descent(X, y, theta, alpha, num_iters):
         of the cost function (compute_cost) and gradient here.
         """
 
+        error = np.dot(X, theta) - y
+        theta = theta - ((alpha/m) * np.dot(X.T, error))
+
         # ============================================================
         # Save the cost j in every iteration
         J_history.append(compute_cost(X, y, theta))

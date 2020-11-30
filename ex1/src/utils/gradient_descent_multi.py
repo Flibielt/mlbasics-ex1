@@ -26,6 +26,8 @@ def gradient_descent_multi(X, y, theta, alpha, num_iters):
         of the cost function (compute_cost_multi) and gradient here.
         """
 
+        theta = theta - (alpha / m) * (np.dot(X, theta) - y).dot(X)
+
         # ============================================================
 
         # Save the cost j in every iteration
