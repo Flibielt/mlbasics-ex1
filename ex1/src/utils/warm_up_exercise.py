@@ -7,12 +7,12 @@ def warm_up_exercise():
         warm_up_exercise() is an example function that returns the 5x5 identity matrix
     """
 
-    a = np.zeros((5, 5))
-
     """
     ============= YOUR CODE HERE ==============
     Instructions: Return the 5x5 identity matrix 
     """
 
+    A = np.zeros(5)     # Change this
+
     # =========================================
-    return a
+    return A
