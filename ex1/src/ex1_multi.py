@@ -94,9 +94,12 @@ def ex1_multi():
     theta, J_history = gradient_descent_multi(X, y, theta, alpha, num_iters)
 
     # Plot the convergence graph
+    fig = pyplot.figure()
     pyplot.plot(np.arange(len(J_history)), J_history, lw=2)
     pyplot.xlabel('Number of iterations')
     pyplot.ylabel('Cost J')
+
+    pyplot.show()
 
     # Display the gradient descent's result
     print('theta computed from gradient descent: {:s}'.format(str(theta)))
