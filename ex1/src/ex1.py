@@ -95,6 +95,7 @@ def ex1():
 
     pyplot.plot(X[:, 1], np.dot(X, theta), '-')
     pyplot.legend(['Training data', 'Linear regression'])
+    pyplot.show()
 
     # Predict values for population sizes of 35,000 and 70,000
     predict1 = np.dot([1, 3.5], theta)
@@ -136,7 +137,6 @@ def ex1():
     pyplot.title('Surface')
 
     # Contour plot
-    fig = pyplot.figure(figsize=(12, 5))
     # Plot J_vals as 15 contours spaced logarithmically between 0.01 and 100
     ax = pyplot.subplot(122)
     pyplot.contour(theta0_vals, theta1_vals, J_vals, linewidths=2, cmap='viridis', levels=np.logspace(-2, 3, 20))
@@ -144,4 +144,5 @@ def ex1():
     pyplot.ylabel('theta1')
     pyplot.plot(theta[0], theta[1], 'ro', ms=10, lw=2)
     pyplot.title('Contour, showing minimum')
+    pyplot.show()
 
